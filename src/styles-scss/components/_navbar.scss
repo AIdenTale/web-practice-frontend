@@ -1,0 +1,45 @@
+.Navbar-absolute {
+  height: 0;
+  display: relative;
+}
+
+.Navbar {
+  display: flex;
+  align-items: center;
+  height: 102px;
+  padding: 0 20px;
+  background-color: rgba(0, 0, 0, 0.341);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.30);
+}
+
+.Navbar-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1160px;
+  margin: 0 auto;
+  flex-grow: 1;
+}
+
+.Navbar-links {
+  a {
+    margin-left: 32px;
+  }
+}
+
+.Navbar-btns {
+  button {
+    width: 90px;
+    padding: 8px 16px;
+    margin-left: 24px;
+    border-radius: 10px;
+    border: 1px solid #FFF;
+    background: none;
+    color: #FFF;
+  }
+
+  button:hover {
+    background: #FFF;
+    color: black;
+  }
+}

@@ -1,3 +1,100 @@
+@import 'node_modules/normalize.css/normalize.css';
+a {
+  text-decoration: none;
+  color: black;
+}
 
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+@font-face {
+  font-family: "Stem";
+  src: url("/src/assets/fonts/em-stem/OTF/Stem-Bold.otf") format("opentype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Stem";
+  src: url("/src/assets/fonts/em-stem/OTF/Stem-Medium.otf") format("opentype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Stem";
+  src: url("/src/assets/fonts/em-stem/OTF/Stem-Regular.otf") format("opentype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Stem";
+  src: url("/src/assets/fonts/em-stem/OTF/Stem-Light.otf") format("opentype");
+  font-weight: 300;
+}
+.Navbar-links a {
+  font-family: "Stem", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  line-height: normal;
+  font-weight: 500;
+  color: #FFF;
+}
+
+.Navbar-btns button {
+  font-family: "Stem", sans-serif;
+  letter-spacing: 0.25px;
+  font-size: 14px;
+  font-style: normal;
+  line-height: normal;
+  font-weight: 500;
+}
+
+.Navbar-absolute {
+  height: 0;
+  display: relative;
+}
+
+.Navbar {
+  display: flex;
+  align-items: center;
+  height: 102px;
+  padding: 0 20px;
+  background-color: rgba(0, 0, 0, 0.341);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.Navbar-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1160px;
+  margin: 0 auto;
+  flex-grow: 1;
+}
+
+.Navbar-links a {
+  margin-left: 32px;
+}
+
+.Navbar-btns button {
+  width: 90px;
+  padding: 8px 16px;
+  margin-left: 24px;
+  border-radius: 10px;
+  border: 1px solid #FFF;
+  background: none;
+  color: #FFF;
+}
+.Navbar-btns button:hover {
+  background: #FFF;
+  color: black;
+}
+
+.Hero {
+  height: 830px;
+}
 
 /*# sourceMappingURL=main.css.map */
