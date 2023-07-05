@@ -22,6 +22,18 @@
   font-weight: 300;
 }
 
+@font-face {
+  font-family: 'Stem';
+  src: url('/src/assets/fonts/em-stem/OTF/Stem-ExtraLight.otf') format('opentype');
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: 'Cormorant';
+  src: url('/src/assets/fonts/Cormorant/TTF/Cormorant-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
 .Navbar-links {
   a {
     font-family: 'Stem', sans-serif;
@@ -29,17 +41,32 @@
     font-style: normal;
     line-height: normal;
     font-weight: 500;
-    color: #FFF;
   }
 }
 
-.Navbar-btns {
-  button {
-    font-family: 'Stem', sans-serif;
-    letter-spacing: 0.25px;
-    font-size: 14px;
+button {
+  font-family: 'Stem', sans-serif;
+  letter-spacing: 0.25px;
+  font-size: 14px;
+  font-style: normal;
+  line-height: normal;
+  font-weight: 500;
+}
+
+.Hero-content {
+  .title {
+    font-family: 'Cormorant', sans-serif;
+    font-size: 120px;
     font-style: normal;
     line-height: normal;
-    font-weight: 500;
+    font-weight: 700;
+  }
+
+  .body {
+    font-family: 'Stem', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    line-height: normal;
+    font-weight: 200;
   }
 }

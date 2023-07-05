@@ -5,8 +5,8 @@ function Navbar() {
   return (
     <div className="Navbar-absolute">
       <nav className="Navbar">
-        <div className="Navbar-content">
-          <LogoIcon width={128} height={32} />
+        <div className="Navbar-content container">
+          <Link to='/general'><LogoIcon width={130} height={30} /></Link>
 
           <ul className="Navbar-links">
             <Link to='/'>Персонажи</Link>

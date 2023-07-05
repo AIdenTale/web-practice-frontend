@@ -1,5 +1,9 @@
 @import 'node_modules/normalize.css/normalize.css';
 
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
 a {
   text-decoration: none;
   color: black;
@@ -13,4 +17,17 @@ ul {
 button {
   border: none;
   cursor: pointer;
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+.container {
+  max-width: 1160px;
+  margin: 0 auto;
 }

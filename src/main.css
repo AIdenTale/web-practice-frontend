@@ -1,4 +1,8 @@
 @import 'node_modules/normalize.css/normalize.css';
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
 a {
   text-decoration: none;
   color: black;
@@ -12,6 +16,19 @@ ul {
 button {
   border: none;
   cursor: pointer;
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+.container {
+  max-width: 1160px;
+  margin: 0 auto;
 }
 
 @font-face {
@@ -34,22 +51,46 @@ button {
   src: url("/src/assets/fonts/em-stem/OTF/Stem-Light.otf") format("opentype");
   font-weight: 300;
 }
+@font-face {
+  font-family: "Stem";
+  src: url("/src/assets/fonts/em-stem/OTF/Stem-ExtraLight.otf") format("opentype");
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Cormorant";
+  src: url("/src/assets/fonts/Cormorant/TTF/Cormorant-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
 .Navbar-links a {
   font-family: "Stem", sans-serif;
   font-size: 18px;
   font-style: normal;
   line-height: normal;
   font-weight: 500;
-  color: #FFF;
 }
 
-.Navbar-btns button {
+button {
   font-family: "Stem", sans-serif;
   letter-spacing: 0.25px;
   font-size: 14px;
   font-style: normal;
   line-height: normal;
   font-weight: 500;
+}
+
+.Hero-content .title {
+  font-family: "Cormorant", sans-serif;
+  font-size: 120px;
+  font-style: normal;
+  line-height: normal;
+  font-weight: 700;
+}
+.Hero-content .body {
+  font-family: "Stem", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  line-height: normal;
+  font-weight: 200;
 }
 
 .Navbar-absolute {
@@ -60,9 +101,8 @@ button {
 .Navbar {
   display: flex;
   align-items: center;
-  height: 102px;
   padding: 0 20px;
-  background-color: rgba(0, 0, 0, 0.341);
+  height: 102px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
@@ -70,31 +110,63 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1160px;
-  margin: 0 auto;
   flex-grow: 1;
 }
 
 .Navbar-links a {
   margin-left: 32px;
+  color: #FFF;
 }
 
 .Navbar-btns button {
   width: 90px;
-  padding: 8px 16px;
   margin-left: 24px;
+}
+
+.Hero {
+  height: 830px;
+  background: url("/src/assets/Hero-bg.jpg") center/cover no-repeat;
+}
+.Hero .overlay {
+  height: 100%;
+  padding: 0 20px;
+  background: linear-gradient(0deg, #0F1018 0%, rgba(16, 16, 24, 0) 100%), linear-gradient(359deg, rgba(0, 0, 0, 0.39) 0%, rgba(0, 0, 0, 0.49) 100%);
+}
+
+.Hero-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.Hero-content .title-bg {
+  background: url("/src/assets/Hero-title-fg.jpg") center/cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.Hero-content .body {
+  max-width: 665px;
+  color: #FFF;
+  margin-bottom: 32px;
+}
+.Hero-content .Button {
+  flex-grow: 0;
+  padding: 10px 24px;
+}
+
+button {
+  padding: 8px 16px;
   border-radius: 10px;
   border: 1px solid #FFF;
   background: none;
   color: #FFF;
 }
-.Navbar-btns button:hover {
+
+button:hover {
   background: #FFF;
   color: black;
-}
-
-.Hero {
-  height: 830px;
 }
 
 /*# sourceMappingURL=main.css.map */
