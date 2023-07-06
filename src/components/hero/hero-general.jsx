@@ -1,12 +1,10 @@
-import Navbar from "./navbar";
-import Button from "./UI/button";
+import Button from "../UI/button";
 
-function Hero() {
+function HeroGeneral() {
   return (
     <div className="Hero">
-      <Navbar />
       <div className="overlay">
-        <div className="Hero-content container">
+        <div className="HeroGeneral Hero-content container">
           <div className="title-bg">
             <h1 className="title">Game Title</h1>
           </div>
@@ -23,4 +21,4 @@ function Hero() {
   );
 }
 
-export default Hero;
+export default HeroGeneral;

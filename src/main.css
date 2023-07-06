@@ -1,4 +1,4 @@
-@import 'node_modules/normalize.css/normalize.css';
+@import './../node_modules/normalize.css/normalize.css';
 *, *::after, *::before {
   box-sizing: border-box;
 }
@@ -95,7 +95,7 @@ button {
 
 .Navbar-absolute {
   height: 0;
-  display: relative;
+  position: relative;
 }
 
 .Navbar {
