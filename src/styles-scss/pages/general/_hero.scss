@@ -1,0 +1,37 @@
+@use './../../base/mixin';
+
+.Hero__general {
+  height: 830px;
+  background: url('/src/assets/general/hero-bg.jpg') center/cover no-repeat;
+  
+  .overlay {
+    @include mixin.overlay(linear-gradient(0deg, #0F1018 0%, rgba(16, 16, 24, 0.00) 100%),
+    linear-gradient(359deg, rgba(0, 0, 0, 0.39) 0%, rgba(0, 0, 0, 0.49) 100%));
+  }
+
+  .Hero-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    .title-bg {
+      background: url('/src/assets/general/hero-title-fg.jpg') center/cover;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .body {
+      max-width: 665px;
+      color: #FFF;
+      margin-bottom: 32px;
+    }
+
+    .Button {
+      flex-grow: 0;
+      padding: 10px 24px;
+    }
+  }
+}

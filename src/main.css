@@ -93,6 +93,38 @@ button {
   font-weight: 200;
 }
 
+.Hero__general {
+  height: 830px;
+  background: url("/src/assets/general/hero-bg.jpg") center/cover no-repeat;
+}
+.Hero__general .overlay {
+  height: 100%;
+  padding: 0 20px;
+  background: linear-gradient(0deg, #0F1018 0%, rgba(16, 16, 24, 0) 100%), linear-gradient(359deg, rgba(0, 0, 0, 0.39) 0%, rgba(0, 0, 0, 0.49) 100%);
+}
+.Hero__general .Hero-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.Hero__general .Hero-content .title-bg {
+  background: url("/src/assets/general/hero-title-fg.jpg") center/cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.Hero__general .Hero-content .body {
+  max-width: 665px;
+  color: #FFF;
+  margin-bottom: 32px;
+}
+.Hero__general .Hero-content .Button {
+  flex-grow: 0;
+  padding: 10px 24px;
+}
+
 .Navbar-absolute {
   height: 0;
   position: relative;
@@ -121,39 +153,6 @@ button {
 .Navbar-btns button {
   width: 90px;
   margin-left: 24px;
-}
-
-.Hero {
-  height: 830px;
-  background: url("/src/assets/Hero-bg.jpg") center/cover no-repeat;
-}
-.Hero .overlay {
-  height: 100%;
-  padding: 0 20px;
-  background: linear-gradient(0deg, #0F1018 0%, rgba(16, 16, 24, 0) 100%), linear-gradient(359deg, rgba(0, 0, 0, 0.39) 0%, rgba(0, 0, 0, 0.49) 100%);
-}
-
-.Hero-content {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-}
-.Hero-content .title-bg {
-  background: url("/src/assets/Hero-title-fg.jpg") center/cover;
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-}
-.Hero-content .body {
-  max-width: 665px;
-  color: #FFF;
-  margin-bottom: 32px;
-}
-.Hero-content .Button {
-  flex-grow: 0;
-  padding: 10px 24px;
 }
 
 button {
