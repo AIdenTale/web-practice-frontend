@@ -21,11 +21,16 @@
   z-index: 2;
 }
 
-@mixin content-centered($max-width: 100%) {
+@mixin center-elements {
   display: flex;
   text-align: center;
   flex-direction: column;
-  max-width: $max-width;
   align-items: center;
-  margin: 0 auto;
+}
+
+@mixin make-union-grid($cols, $column-gap, $row-gap) {
+  display: grid;
+  grid-template-columns: repeat($cols, 1fr);
+  column-gap: $column-gap;
+  row-gap: $row-gap;
 }

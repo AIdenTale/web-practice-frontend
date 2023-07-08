@@ -1,0 +1,5 @@
+@use '../base/mixin';
+
+.articles-grid {
+  @include mixin.make-union-grid($cols: 3, $column-gap: 40px, $row-gap: 34px);
+}

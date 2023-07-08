@@ -1,44 +1,44 @@
 @use './../../base/mixin';
 @use './../../base/typography';
 
-.Hero__general {
+.general-hero {
   @include mixin.site-section(830px);
   background: url('/src/assets/general/hero-bg.jpg') center/cover no-repeat;
-  
+
   .overlay {
     @include mixin.overlay(linear-gradient(0deg, #0F1018 0%, rgba(16, 16, 24, 0.00) 100%),
-    linear-gradient(359deg, rgba(0, 0, 0, 0.39) 0%, rgba(0, 0, 0, 0.49) 100%));
+      linear-gradient(359deg, rgba(0, 0, 0, 0.39) 0%, rgba(0, 0, 0, 0.49) 100%));
   }
 
-  .Hero-content {
+  &__content {
     @include mixin.content-container;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+  }
 
-    .title-bg {
-      background: url('/src/assets/general/hero-title-fg.jpg') center/cover;
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-    }
+  &__title-foreground {
+    background: url('/src/assets/general/hero-title-fg.jpg') center/cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
 
-    .title {
-      @include typography.title($font-size: 120px);
-    }
+  &__title {
+    @include typography.title($font-size: 120px, $color: none);
+  }
 
-    .body {
-      @include typography.body($font-size: 20px);
-      max-width: 665px;
-      margin-bottom: 32px;
-    }
+  &__body {
+    @include typography.body($font-size: 20px);
+    max-width: 665px;
+    margin-bottom: 32px;
+  }
 
-    .button {
-      @include typography.button(16px);
-      flex-grow: 0;
-      padding: 10px 24px;
-    }
+  &__button {
+    @include typography.button(16px);
+    flex-grow: 0;
+    padding: 10px 24px;
   }
 }

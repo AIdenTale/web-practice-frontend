@@ -64,67 +64,7 @@ hr {
   src: url("/src/assets/fonts/Cormorant/TTF/Cormorant-Bold.ttf") format("truetype");
   font-weight: 700;
 }
-.Hero__general {
-  height: 830px;
-  position: relative;
-  background: url("/src/assets/general/hero-bg.jpg") center/cover no-repeat;
-}
-.Hero__general .overlay {
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(0deg, #0F1018 0%, rgba(16, 16, 24, 0) 100%), linear-gradient(359deg, rgba(0, 0, 0, 0.39) 0%, rgba(0, 0, 0, 0.49) 100%);
-}
-.Hero__general .Hero-content {
-  position: relative;
-  max-width: 1160px;
-  margin: 0 auto;
-  height: 100%;
-  z-index: 2;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-}
-.Hero__general .Hero-content .title-bg {
-  background: url("/src/assets/general/hero-title-fg.jpg") center/cover;
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-}
-.Hero__general .Hero-content .title {
-  font-family: "Cormorant", sans-serif;
-  font-style: normal;
-  font-size: 120px;
-  line-height: normal;
-  font-weight: 700;
-}
-.Hero__general .Hero-content .body {
-  font-family: "Stem", sans-serif;
-  line-height: normal;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 200;
-  color: #FFF;
-  max-width: 665px;
-  margin-bottom: 32px;
-}
-.Hero__general .Hero-content .button {
-  font-family: "Stem", sans-serif;
-  letter-spacing: 0.25px;
-  font-size: 16px;
-  line-height: normal;
-  font-style: normal;
-  font-weight: 500;
-  flex-grow: 0;
-  padding: 10px 24px;
-}
-
-.General-characters {
+.general-characters {
   height: 1380px;
   position: relative;
   background: linear-gradient(180deg, #131522 0%, #727D84 100%), url("/src/assets/general/characters-bg.jpg");
@@ -132,7 +72,7 @@ hr {
   background-position: top, bottom;
   background-repeat: no-repeat;
 }
-.General-characters .overlay {
+.general-characters .overlay {
   position: absolute;
   z-index: 1;
   top: 0;
@@ -141,7 +81,7 @@ hr {
   bottom: 0;
   background: rgba(3, 3, 3, 0.28);
 }
-.General-characters .characters-content {
+.general-characters .characters-content {
   position: relative;
   max-width: 1160px;
   margin: 0 auto;
@@ -149,10 +89,10 @@ hr {
   z-index: 2;
   padding: 76px 0 108px 0;
 }
-.General-characters .characters-content .section-divisor {
+.general-characters .characters-content .section-divisor {
   margin-bottom: 40px;
 }
-.General-characters .characters-grid {
+.general-characters .characters-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin-bottom: 190px;
@@ -169,10 +109,11 @@ hr {
 }
 .character-portrait .title {
   font-family: "Cormorant", sans-serif;
-  font-style: normal;
-  font-size: 60px;
   line-height: normal;
   font-weight: 700;
+  font-size: 60px;
+  font-style: normal;
+  color: #FFF;
   position: relative;
   top: 10px;
 }
@@ -183,18 +124,19 @@ hr {
 }
 .character-choice .title {
   font-family: "Cormorant", sans-serif;
-  font-style: normal;
-  font-size: 60px;
   line-height: normal;
   font-weight: 700;
+  font-size: 60px;
+  font-style: normal;
+  color: #FFF;
   margin-bottom: 20px;
 }
 .character-choice .description {
   font-family: "Stem", sans-serif;
   line-height: 120%;
+  font-weight: 200;
   font-size: 16px;
   font-style: normal;
-  font-weight: 200;
   color: #FFF;
   margin-bottom: 25px;
 }
@@ -208,24 +150,25 @@ hr {
   display: flex;
   text-align: center;
   flex-direction: column;
-  max-width: 760px;
   align-items: center;
+  max-width: 760px;
   margin: 0 auto;
 }
 .characters-call .title {
   font-family: "Cormorant", sans-serif;
-  font-style: normal;
-  font-size: 60px;
   line-height: normal;
   font-weight: 700;
+  font-size: 60px;
+  font-style: normal;
+  color: #FFF;
   margin-bottom: 18px;
 }
 .characters-call .body {
   font-family: "Stem", sans-serif;
   line-height: normal;
+  font-weight: 200;
   font-size: 24px;
   font-style: normal;
-  font-weight: 200;
   color: #FFF;
   margin-bottom: 40px;
 }
@@ -234,11 +177,11 @@ hr {
 }
 .characters-call .controls .button {
   font-family: "Stem", sans-serif;
+  font-weight: 500;
   letter-spacing: 0.25px;
   font-size: 24px;
   line-height: normal;
   font-style: normal;
-  font-weight: 500;
   margin-right: 30px;
   width: 190px;
 }
@@ -266,10 +209,11 @@ hr {
 }
 .character-btns .btn .label, .character-btns .btn_chosen .label {
   font-family: "Cormorant", sans-serif;
-  font-style: normal;
-  font-size: 14px;
   line-height: normal;
   font-weight: 700;
+  font-size: 14px;
+  font-style: normal;
+  color: #FFF;
   pointer-events: none;
   text-transform: uppercase;
 }
@@ -280,7 +224,98 @@ hr {
   background-color: #516767;
 }
 
-.Navbar {
+.general-hero {
+  height: 830px;
+  position: relative;
+  background: url("/src/assets/general/hero-bg.jpg") center/cover no-repeat;
+}
+.general-hero .overlay {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(0deg, #0F1018 0%, rgba(16, 16, 24, 0) 100%), linear-gradient(359deg, rgba(0, 0, 0, 0.39) 0%, rgba(0, 0, 0, 0.49) 100%);
+}
+.general-hero__content {
+  position: relative;
+  max-width: 1160px;
+  margin: 0 auto;
+  height: 100%;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.general-hero__title-foreground {
+  background: url("/src/assets/general/hero-title-fg.jpg") center/cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.general-hero__title {
+  font-family: "Cormorant", sans-serif;
+  line-height: normal;
+  font-weight: 700;
+  font-size: 120px;
+  font-style: normal;
+  color: none;
+}
+.general-hero__body {
+  font-family: "Stem", sans-serif;
+  line-height: normal;
+  font-weight: 200;
+  font-size: 20px;
+  font-style: normal;
+  color: #FFF;
+  max-width: 665px;
+  margin-bottom: 32px;
+}
+.general-hero__button {
+  font-family: "Stem", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.25px;
+  font-size: 16px;
+  line-height: normal;
+  font-style: normal;
+  flex-grow: 0;
+  padding: 10px 24px;
+}
+
+.general-news {
+  background: linear-gradient(180deg, #030201 0%, #1E303A 100%);
+  height: 870px;
+  position: relative;
+}
+.general-news__content {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  max-width: 1160px;
+  margin: 0 auto;
+  height: 100%;
+  z-index: 2;
+}
+.general-news__divisor {
+  margin-bottom: 76px;
+}
+.general-news__grid {
+  margin-bottom: 34px;
+}
+.general-news__button {
+  align-self: center;
+  font-family: "Stem", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.25px;
+  font-size: 16px;
+  line-height: normal;
+  font-style: normal;
+}
+
+.navbar {
   display: flex;
   align-items: center;
   position: absolute;
@@ -293,8 +328,7 @@ hr {
   z-index: 100;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
-
-.Navbar-content {
+.navbar__content {
   position: relative;
   max-width: 1160px;
   margin: 0 auto;
@@ -305,8 +339,7 @@ hr {
   justify-content: space-between;
   flex-grow: 1;
 }
-
-.Navbar-links a {
+.navbar__link {
   font-family: "Stem", sans-serif;
   font-weight: 500;
   font-size: 18px;
@@ -315,14 +348,13 @@ hr {
   margin-left: 32px;
   color: #FFF;
 }
-
-.Navbar-btns button {
+.navbar__button {
   font-family: "Stem", sans-serif;
+  font-weight: 500;
   letter-spacing: 0.25px;
   font-size: 14px;
   line-height: normal;
   font-style: normal;
-  font-weight: 500;
   margin-left: 24px;
   width: 90px;
 }
@@ -340,17 +372,57 @@ button:hover {
   color: black;
 }
 
+.article-card {
+  background: none center/cover no-repeat;
+  border-radius: 5px;
+  overflow: hidden;
+  height: 250px;
+}
+.article-card__overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0) 100%);
+  padding: 24px;
+  height: 100%;
+  width: 100%;
+}
+.article-card__title {
+  font-family: "Stem", sans-serif;
+  line-height: normal;
+  font-weight: 500;
+  font-size: 16px;
+  font-style: normal;
+  color: #FFF;
+  margin-bottom: 8px;
+}
+.article-card__body {
+  font-family: "Stem", sans-serif;
+  line-height: normal;
+  font-weight: 200;
+  font-size: 15px;
+  font-style: normal;
+  color: #FFF;
+}
+
+.articles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 40px;
+  row-gap: 34px;
+}
+
 .section-divisor {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.section-divisor .tag {
+.section-divisor__tag {
   font-family: "Stem", sans-serif;
   line-height: normal;
+  font-weight: 200;
   font-size: 16px;
   font-style: normal;
-  font-weight: 200;
   color: #FFF;
   display: inline-flex;
   justify-content: center;
@@ -361,7 +433,7 @@ button:hover {
   border-radius: 34px;
   border: 1px solid #FFF;
 }
-.section-divisor .divisor {
+.section-divisor__hr {
   background: #FFF;
   flex-grow: 1;
   height: 1px;

@@ -2,7 +2,9 @@
 @use './../../../base/typography';
 
 .characters-call {
-  @include mixin.content-centered(760px);
+  @include mixin.center-elements;
+  max-width: 760px;
+  margin: 0 auto;
 
   .title {
     @include typography.title($font-size: 60px);

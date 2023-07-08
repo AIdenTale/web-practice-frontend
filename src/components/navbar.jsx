@@ -3,20 +3,20 @@ import { Link } from 'react-router-dom';
 
 function Navbar() {
   return (
-    <nav className="Navbar">
-      <div className="Navbar-content">
+    <nav className="navbar">
+      <div className="navbar__content">
         <Link to='/'><LogoIcon width={130} height={30} /></Link>
 
-        <ul className="Navbar-links">
-          <Link to='/'>Персонажи</Link>
-          <Link to='/'>Новости</Link>
-          <Link to='/'>Обновления</Link>
-          <Link to='/'>Форум</Link>
+        <ul className="navbar__list">
+          <Link className="navbar__link" to='/'>Персонажи</Link>
+          <Link className="navbar__link" to='/'>Новости</Link>
+          <Link className="navbar__link" to='/'>Обновления</Link>
+          <Link className="navbar__link" to='/'>Форум</Link>
         </ul>
 
-        <div className="Navbar-btns">
-          <button>Вход</button>
-          <button>Играть</button>
+        <div className="navbar__controls">
+          <button className='navbar__button'>Вход</button>
+          <button className='navbar__button'>Играть</button>
         </div>
       </div>
     </nav>

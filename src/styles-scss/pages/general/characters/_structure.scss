@@ -1,6 +1,6 @@
 @use './../../../base/mixin';
 
-.General-characters {
+.general-characters {
   @include mixin.site-section(1380px);
   background: linear-gradient(180deg, #131522 0%, #727D84 100%), url('/src/assets/general/characters-bg.jpg');
   background-size: 100% 50%, 100% 50%;

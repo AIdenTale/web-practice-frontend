@@ -1,0 +1,28 @@
+@use '../base/typography';
+@use '../base/mixin';
+
+.article-card {
+  background: none center/cover no-repeat;
+  border-radius: 5px;
+  overflow: hidden;
+  height: 250px;
+  
+  &__overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background: linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0.00) 100%);
+    padding: 24px;
+    height: 100%;
+    width: 100%;
+  }
+
+  &__title {
+    @include typography.title($font-family: 'Stem', $font-size: 16px, $font-weight: 500);
+    margin-bottom: 8px;
+  }
+
+  &__body {
+    @include typography.body($font-size: 15px);
+  }
+}

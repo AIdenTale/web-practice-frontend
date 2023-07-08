@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Button from "../components/UI/button";
 import SectionDivivsor from "../components/section-divisor";
+import ArticlesGrid from "../components/articles-grid";
 
 function General() {
   const [characters, setCharacters] = useState(
@@ -39,29 +40,63 @@ function General() {
         'Вор': 3,
         'Жрец': 4,
       }
-    });
-
+    }
+  );
+  const [newsData, setNewsData] = useState(
+    [
+      {
+        title: 'Великий Турнир героев объявлен!',
+        body: 'Сразись с лучшими, завоюй славу и получи эпические награды!',
+        backgroundSource: '/src/assets/general/article-card-bg-1.jpg',
+      },
+      {
+        title: 'Великий Турнир героев объявлен!',
+        body: 'Сразись с лучшими, завоюй славу и получи эпические награды!',
+        backgroundSource: '/src/assets/general/article-card-bg-2.jpg',
+      },
+      {
+        title: 'Великий Турнир героев объявлен!',
+        body: 'Сразись с лучшими, завоюй славу и получи эпические награды!',
+        backgroundSource: '/src/assets/general/article-card-bg-2.jpg',
+      },
+      {
+        title: 'Великий Турнир героев объявлен!',
+        body: 'Сразись с лучшими, завоюй славу и получи эпические награды!',
+        backgroundSource: '/src/assets/general/article-card-bg-2.jpg',
+      },
+      {
+        title: 'Великий Турнир героев объявлен!',
+        body: 'Сразись с лучшими, завоюй славу и получи эпические награды!',
+        backgroundSource: '/src/assets/general/article-card-bg-2.jpg',
+      },
+      {
+        title: 'Великий Турнир героев объявлен!',
+        body: 'Сразись с лучшими, завоюй славу и получи эпические награды!',
+        backgroundSource: '/src/assets/general/article-card-bg-2.jpg',
+      },
+    ]
+  );
   const [characterChosen, setCharacterChosen] = useState('Маг');
 
   return (
-    <main className="General">
-      <section className="Hero Hero__general">
+    <main className="general">
+      <section className="general-hero">
         <div className="overlay"></div>
-        <div className="Hero-content">
-          <div className="title-bg">
-            <h1 className="title">Game Title</h1>
+        <div className="general-hero__content">
+          <div className="general-hero__title-foreground">
+            <h1 className="general-hero__title">Game Title</h1>
           </div>
 
-          <p className="body">Пошаговая стратегия — жанр компьютерных игр, где участники делают ходы по очереди.
+          <p className="general-hero__body">Пошаговая стратегия — жанр компьютерных игр, где участники делают ходы по очереди.
             Заказать услугу Разработка пошаговых стратегий можно у специалистов компании DreamCraft Studio.
             В результате Вы получите прибыльный продукт.
           </p>
 
-          <Button>Присоединиться</Button>
+          <Button className="general-hero__button">Присоединиться</Button>
         </div>
       </section>
 
-      <section className="General-characters">
+      <section className="general-characters">
         <div className="overlay"></div>
 
         <div className="characters-content">
@@ -72,11 +107,13 @@ function General() {
               <h2 className="title">{characterChosen}</h2>
 
               <div className="character-btns">
-                {characters['data'].map((character, index) => {
+                {characters.data.map((character, index) => {
                   return (
                     <div className={characterChosen == character.name ? 'btn_chosen' : 'btn'}
                       onClick={() => setCharacterChosen(character.name)} key={index}>
+
                       <img className="avatar" src={`${character.src}`} alt="character-avatar" />
+
                       <label htmlFor="" className="label">{character.name}</label>
                     </div>
                   );
@@ -89,7 +126,6 @@ function General() {
             </div>
 
             <div className="characters-grid-col">
-              {/* <img src="" alt="" className="character-portrait" /> */}
               <div className="character-portrait">
                 <h2 className="title">{characterChosen}</h2>
               </div>
@@ -105,10 +141,22 @@ function General() {
             </div>
 
             <div className="controls">
-              <Button>Играть</Button>
-              <Button>Персонажи</Button>
+              <Button className='button'>Играть</Button>
+              <Button className='button'>Персонажи</Button>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="general-news">
+        <div className="overlay"></div>
+
+        <div className="general-news__content">
+          <SectionDivivsor className="general-news__divisor">Новости</SectionDivivsor>
+
+          <ArticlesGrid className="general-news__grid" cardsData={newsData} />
+
+          <Button className='general-news__button'>Узнать больше</Button>
         </div>
       </section>
     </main>

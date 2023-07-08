@@ -1,7 +1,7 @@
 @use '../base/mixin';
 @use '../base/typography';
 
-.Navbar {
+.navbar {
   display: flex;
   align-items: center;
   position: absolute;
@@ -13,26 +13,22 @@
   padding: 0 20px;
   z-index: 100;
   border-bottom: 1px solid rgba(255, 255, 255, 0.30);
-}
 
-.Navbar-content {
-  @include mixin.content-container;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-grow: 1;
-}
+  &__content {
+    @include mixin.content-container;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 1;
+  }
 
-.Navbar-links {
-  a {
+  &__link {
     @include typography.link($font-size: 18px, $font-weight: 500);
     margin-left: 32px;
     color: #FFF;
   }
-}
 
-.Navbar-btns {
-  button {
+  &__button {
     @include typography.button(14px);
     margin-left: 24px;
     width: 90px;

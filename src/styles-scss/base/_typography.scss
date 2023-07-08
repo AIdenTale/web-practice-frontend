@@ -34,30 +34,31 @@
   font-weight: 700;
 }
 
-@mixin body($font-size: 24px, $line-height: normal, $color: #FFF) {
-  font-family: 'Stem', sans-serif;
+@mixin body($font-family: 'Stem', $font-size: 24px, $font-weight: 200, $line-height: normal, $color: #FFF) {
+  font-family: $font-family, sans-serif;
   line-height: $line-height;
+  font-weight: $font-weight;
   font-size: $font-size;
   font-style: normal;
-  font-weight: 200;
   color: $color;
 }
 
-@mixin title($font-size: 24px, $font-weight: 700, $line-height: normal, $color: #FFF) {
-  font-family: 'Cormorant', sans-serif;
-  font-style: normal;
-  font-size: $font-size;
+@mixin title($font-family: 'Cormorant', $font-size: 24px, $font-weight: 700, $line-height: normal, $color: #FFF) {
+  font-family: $font-family, sans-serif;
   line-height: $line-height;
   font-weight: $font-weight;
+  font-size: $font-size;
+  font-style: normal;
+  color: $color;
 }
 
-@mixin button($font-size) {
+@mixin button($font-size: 16px, $font-weight: 500) {
   font-family: 'Stem', sans-serif;
+  font-weight: $font-weight;
   letter-spacing: 0.25px;
   font-size: $font-size;
   line-height: normal;
   font-style: normal;
-  font-weight: 500;
 }
 
 @mixin link($font-size, $font-weight) {
