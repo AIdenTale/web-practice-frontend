@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body {
+  color: #FFF;
+}
+
 a {
   text-decoration: none;
   color: black;
@@ -27,7 +31,6 @@ p {
   margin: 0;
 }
 
-.container {
-  max-width: 1160px;
-  margin: 0 auto;
+hr {
+  margin: 0;
 }

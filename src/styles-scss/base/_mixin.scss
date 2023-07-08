@@ -1,5 +1,31 @@
 @mixin overlay($color...) {
-  height: 100%;
-  padding: 0 20px;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background: $color;
+}
+
+@mixin site-section($height) {
+  height: $height;
+  position: relative;
+}
+
+@mixin content-container($max-width: 1160px) {
+  position: relative;
+  max-width: $max-width;
+  margin: 0 auto;
+  height: 100%;
+  z-index: 2;
+}
+
+@mixin content-centered($max-width: 100%) {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  max-width: $max-width;
+  align-items: center;
+  margin: 0 auto;
 }

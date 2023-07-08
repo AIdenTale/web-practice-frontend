@@ -1,0 +1,25 @@
+@use '../base/typography';
+
+.section-divisor {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .tag {
+    @include typography.body($font-size: 16px);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 7px 14px;
+    color: white;
+    margin-right: 40px;
+    border-radius: 34px;
+    border: 1px solid #FFF;
+  }
+
+  .divisor {
+    background: #FFF;
+    flex-grow: 1;
+    height: 1px;
+  }
+}

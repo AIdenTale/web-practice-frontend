@@ -1,0 +1,22 @@
+@use './../../../base/typography';
+
+.character-choice {
+  display: flex;
+  flex-direction: column;
+
+  .title {
+    @include typography.title($font-size: 60px);
+    margin-bottom: 20px;
+  }
+
+  .description {
+    @include typography.body($font-size: 16px, $line-height: 120%);
+    margin-bottom: 25px;
+  }
+
+  .video {
+    height: 255px;
+    background-color: #bab9b9;
+    border-radius: 5px;
+  }
+}
