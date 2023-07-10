@@ -2,6 +2,7 @@ import { useState } from "react";
 import Button from "../components/UI/button";
 import SectionDivivsor from "../components/section-divisor";
 import ArticlesGrid from "../components/articles-grid";
+import CharacterCard from "../components/character-card";
 
 function General() {
   const [characters, setCharacters] = useState(
@@ -14,22 +15,22 @@ function General() {
         },
         {
           name: 'Воин',
-          description: 'Маг - это юнит, обладающий способностью использовать магию и имеющий высокий показатель маны. Он обычно носит плащ, который полностью покрывает его тело, и использует посох для произнесения заклинаний. Маг не может носить тяжелую броню, только легкую. Конкретное применение заклинаний зависит от самого заклинания и количества интеллекта, и может отличаться от описания данного заклинания.',
+          description: 'Описание воина.',
           src: 'src/assets/general/characters-avatar.png',
         },
         {
           name: 'Лучник',
-          description: 'Маг - это юнит, обладающий способностью использовать магию и имеющий высокий показатель маны. Он обычно носит плащ, который полностью покрывает его тело, и использует посох для произнесения заклинаний. Маг не может носить тяжелую броню, только легкую. Конкретное применение заклинаний зависит от самого заклинания и количества интеллекта, и может отличаться от описания данного заклинания.',
+          description: 'Описание лучника.',
           src: 'src/assets/general/characters-avatar.png',
         },
         {
           name: 'Вор',
-          description: 'Маг - это юнит, обладающий способностью использовать магию и имеющий высокий показатель маны. Он обычно носит плащ, который полностью покрывает его тело, и использует посох для произнесения заклинаний. Маг не может носить тяжелую броню, только легкую. Конкретное применение заклинаний зависит от самого заклинания и количества интеллекта, и может отличаться от описания данного заклинания.',
+          description: 'Описание вора.',
           src: 'src/assets/general/characters-avatar.png',
         },
         {
           name: 'Жрец',
-          description: 'Маг - это юнит, обладающий способностью использовать магию и имеющий высокий показатель маны. Он обычно носит плащ, который полностью покрывает его тело, и использует посох для произнесения заклинаний. Маг не может носить тяжелую броню, только легкую. Конкретное применение заклинаний зависит от самого заклинания и количества интеллекта, и может отличаться от описания данного заклинания.',
+          description: 'Описание жреца.',
           src: 'src/assets/general/characters-avatar.png',
         },
       ],
@@ -97,52 +98,54 @@ function General() {
       </section>
 
       <section className="general-characters">
-        <div className="overlay"></div>
+        <div className="general-characters__overlay">
+          <div className="general-characters__content">
+            <SectionDivivsor className="general-characters__divisor">Персонажи</SectionDivivsor>
 
-        <div className="characters-content">
-          <SectionDivivsor>Персонажи</SectionDivivsor>
+            <div className="general-characters__grid">
+              <div className="general-characters__choice">
+                <div className="general-characters__top">
+                  <h2 className="general-characters__title general-characters__title_1">{characterChosen}</h2>
 
-          <div className="characters-grid">
-            <div className="character-choice">
-              <h2 className="title">{characterChosen}</h2>
+                  <div className="general-characters__controls">
+                    {characters.data.map((character, index) => {
+                      return (
+                        <CharacterCard
+                          className={characterChosen == character.name ?
+                            'general-characters__control_active' :
+                            'general-characters__control'}
+                          callback={setCharacterChosen}
+                          name={character.name}
+                          src={character.src}
+                          key={index} />
+                      );
+                    })}
+                  </div>
 
-              <div className="character-btns">
-                {characters.data.map((character, index) => {
-                  return (
-                    <div className={characterChosen == character.name ? 'btn_chosen' : 'btn'}
-                      onClick={() => setCharacterChosen(character.name)} key={index}>
+                  <div className="general-characters__description">{characters.data[characters.index[characterChosen]].description}</div>
+                </div>
 
-                      <img className="avatar" src={`${character.src}`} alt="character-avatar" />
 
-                      <label htmlFor="" className="label">{character.name}</label>
-                    </div>
-                  );
-                })}
+                <div className="general-characters__video"></div>
               </div>
 
-              <p className="description">{characters.data[characters.index[characterChosen]].description}</p>
-
-              <div className="video"></div>
-            </div>
-
-            <div className="characters-grid-col">
-              <div className="character-portrait">
-                <h2 className="title">{characterChosen}</h2>
+              <div className="general-characters__portrait">
+                <h2 className="general-characters__title general-characters__title_2">{characterChosen}</h2>
               </div>
             </div>
-          </div>
 
-          <div className="characters-call">
-            <h2 className="title">Выбери своего персонажа</h2>
+            <div className="general-characters__call">
+              <h2 className="general-characters__title general-characters__title_3">Выбери своего персонажа</h2>
 
-            <div className="body">Перед тобой открывается мир приключений, и ты стоишь на перекрестке своей судьбы.
-              Выбери воина, мага или другого персонажа, определи свою стратегию и отправляйся в путь.
-              Время решить, кем ты хочешь стать в этом увлекательном мире.
-            </div>
+              <div className="general-characters__body">Перед тобой открывается мир приключений, и ты стоишь на перекрестке своей судьбы.
+                Выбери воина, мага или другого персонажа, определи свою стратегию и отправляйся в путь.
+                Время решить, кем ты хочешь стать в этом увлекательном мире.
+              </div>
 
-            <div className="controls">
-              <Button className='button'>Играть</Button>
-              <Button className='button'>Персонажи</Button>
+              <div className="general-characters__buttons">
+                <Button className="general-characters__button">Играть</Button>
+                <Button className="general-characters__button">Персонажи</Button>
+              </div>
             </div>
           </div>
         </div>

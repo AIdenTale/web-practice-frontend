@@ -1,0 +1,25 @@
+@use './../base/typography';
+
+.character-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 5px;
+  margin-right: 10px;
+  max-width: 100px;
+  min-width: 85px;
+  height: 110px;
+  flex-grow: 1;
+  cursor: pointer;
+
+  &__avatar {
+    margin-bottom: 5px;
+  }
+
+  &__label {
+    @include typography.title($font-size: 14px);
+    text-transform: uppercase;
+    pointer-events: none;
+  }
+}
