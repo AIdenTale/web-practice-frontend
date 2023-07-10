@@ -3,11 +3,10 @@
 
 .general-news {
   background: linear-gradient(180deg, #030201 0%, #1E303A 100%);
-  @include mixin.site-section(870px);
   
   &__content {
     display: flex;
-    padding: 40px 0 0 0;
+    padding: 40px 0 120px 0;
     flex-direction: column;
     @include mixin.content-container;
   }

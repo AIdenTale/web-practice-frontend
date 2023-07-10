@@ -2,14 +2,13 @@
 @use './../../base/typography';
 
 .general-characters {
-  @include mixin.site-section(1400px);
   background: linear-gradient(180deg, #131522 0%, #727D84 100%), url('/src/assets/general/characters-bg.jpg');
   background-size: 100% 50%, 100% 50%;
   background-position: top, bottom;
   background-repeat: no-repeat;
 
   &__overlay {
-    @include mixin.overlay(rgba(3, 3, 3, 0.28));
+    background: rgba(3, 3, 3, 0.28);
   }
 
   &__content {

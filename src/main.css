@@ -65,28 +65,18 @@ hr {
   font-weight: 700;
 }
 .general-characters {
-  height: 1400px;
-  position: relative;
   background: linear-gradient(180deg, #131522 0%, #727D84 100%), url("/src/assets/general/characters-bg.jpg");
   background-size: 100% 50%, 100% 50%;
   background-position: top, bottom;
   background-repeat: no-repeat;
 }
 .general-characters__overlay {
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
   background: rgba(3, 3, 3, 0.28);
 }
 .general-characters__content {
-  position: relative;
   max-width: 1160px;
   margin: 0 auto;
   height: 100%;
-  z-index: 2;
   padding: 76px 0 108px 0;
 }
 .general-characters__divisor {
@@ -193,30 +183,21 @@ hr {
 }
 
 .general-hero {
-  height: 830px;
-  position: relative;
   background: url("/src/assets/general/hero-bg.jpg") center/cover no-repeat;
 }
-.general-hero .overlay {
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+.general-hero__overlay {
   background: linear-gradient(0deg, #0F1018 0%, rgba(16, 16, 24, 0) 100%), linear-gradient(359deg, rgba(0, 0, 0, 0.39) 0%, rgba(0, 0, 0, 0.49) 100%);
 }
 .general-hero__content {
-  position: relative;
   max-width: 1160px;
   margin: 0 auto;
   height: 100%;
-  z-index: 2;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  padding: 284px 0 235px 0;
 }
 .general-hero__title-foreground {
   background: url("/src/assets/general/hero-title-fg.jpg") center/cover;
@@ -255,18 +236,14 @@ hr {
 
 .general-news {
   background: linear-gradient(180deg, #030201 0%, #1E303A 100%);
-  height: 870px;
-  position: relative;
 }
 .general-news__content {
   display: flex;
-  padding: 40px 0 0 0;
+  padding: 40px 0 120px 0;
   flex-direction: column;
-  position: relative;
   max-width: 1160px;
   margin: 0 auto;
   height: 100%;
-  z-index: 2;
 }
 .general-news__divisor {
   margin-bottom: 76px;
@@ -290,19 +267,14 @@ hr {
   position: absolute;
   height: 102px;
   left: 0;
-  top: 0;
   right: 0;
-  z-index: 5;
   padding: 0 20px;
-  z-index: 100;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 .navbar__content {
-  position: relative;
   max-width: 1160px;
   margin: 0 auto;
   height: 100%;
-  z-index: 2;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -341,6 +313,40 @@ button:hover {
   color: black;
 }
 
+.articles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 40px;
+  row-gap: 34px;
+}
+
+.section-divisor {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.section-divisor__tag {
+  font-family: "Stem", sans-serif;
+  line-height: normal;
+  font-weight: 200;
+  font-size: 16px;
+  font-style: normal;
+  color: #FFF;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 7px 14px;
+  color: white;
+  margin-right: 40px;
+  border-radius: 34px;
+  border: 1px solid #FFF;
+}
+.section-divisor__hr {
+  background: #FFF;
+  flex-grow: 1;
+  height: 1px;
+}
+
 .article-card {
   background: none center/cover no-repeat;
   border-radius: 5px;
@@ -374,13 +380,6 @@ button:hover {
   color: #FFF;
 }
 
-.articles-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  column-gap: 40px;
-  row-gap: 34px;
-}
-
 .character-card {
   display: flex;
   align-items: center;
@@ -406,33 +405,6 @@ button:hover {
   color: #FFF;
   text-transform: uppercase;
   pointer-events: none;
-}
-
-.section-divisor {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.section-divisor__tag {
-  font-family: "Stem", sans-serif;
-  line-height: normal;
-  font-weight: 200;
-  font-size: 16px;
-  font-style: normal;
-  color: #FFF;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  padding: 7px 14px;
-  color: white;
-  margin-right: 40px;
-  border-radius: 34px;
-  border: 1px solid #FFF;
-}
-.section-divisor__hr {
-  background: #FFF;
-  flex-grow: 1;
-  height: 1px;
 }
 
 /*# sourceMappingURL=main.css.map */

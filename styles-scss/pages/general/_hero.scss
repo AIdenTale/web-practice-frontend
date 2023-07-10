@@ -2,12 +2,11 @@
 @use './../../base/typography';
 
 .general-hero {
-  @include mixin.site-section(830px);
   background: url('/src/assets/general/hero-bg.jpg') center/cover no-repeat;
 
-  .overlay {
-    @include mixin.overlay(linear-gradient(0deg, #0F1018 0%, rgba(16, 16, 24, 0.00) 100%),
-      linear-gradient(359deg, rgba(0, 0, 0, 0.39) 0%, rgba(0, 0, 0, 0.49) 100%));
+  &__overlay {
+    background: linear-gradient(0deg, #0F1018 0%, rgba(16, 16, 24, 0.00) 100%),
+      linear-gradient(359deg, rgba(0, 0, 0, 0.39) 0%, rgba(0, 0, 0, 0.49) 100%);
   }
 
   &__content {
@@ -17,6 +16,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    padding: 284px 0 235px 0;
   }
 
   &__title-foreground {

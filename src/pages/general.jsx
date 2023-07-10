@@ -2,7 +2,7 @@ import { useState } from "react";
 import Button from "../components/UI/button";
 import SectionDivivsor from "../components/section-divisor";
 import ArticlesGrid from "../components/articles-grid";
-import CharacterCard from "../components/character-card";
+import CharacterCard from "../components/cards/character-card";
 
 function General() {
   const [characters, setCharacters] = useState(
@@ -82,18 +82,19 @@ function General() {
   return (
     <main className="general">
       <section className="general-hero">
-        <div className="overlay"></div>
-        <div className="general-hero__content">
-          <div className="general-hero__title-foreground">
-            <h1 className="general-hero__title">Game Title</h1>
+        <div className="general-hero__overlay">
+          <div className="general-hero__content">
+            <div className="general-hero__title-foreground">
+              <h1 className="general-hero__title">Game Title</h1>
+            </div>
+
+            <p className="general-hero__body">Пошаговая стратегия — жанр компьютерных игр, где участники делают ходы по очереди.
+              Заказать услугу Разработка пошаговых стратегий можно у специалистов компании DreamCraft Studio.
+              В результате Вы получите прибыльный продукт.
+            </p>
+
+            <Button className="general-hero__button">Присоединиться</Button>
           </div>
-
-          <p className="general-hero__body">Пошаговая стратегия — жанр компьютерных игр, где участники делают ходы по очереди.
-            Заказать услугу Разработка пошаговых стратегий можно у специалистов компании DreamCraft Studio.
-            В результате Вы получите прибыльный продукт.
-          </p>
-
-          <Button className="general-hero__button">Присоединиться</Button>
         </div>
       </section>
 

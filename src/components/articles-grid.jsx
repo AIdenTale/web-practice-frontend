@@ -1,4 +1,4 @@
-import ArticleCard from "./article-card";
+import ArticleCard from "./cards/article-card";
 
 function ArticlesGrid({ cardsData, className }) {
   return (
