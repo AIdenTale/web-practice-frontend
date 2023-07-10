@@ -3,6 +3,7 @@ import Button from "../components/UI/button";
 import SectionDivivsor from "../components/section-divisor";
 import ArticlesGrid from "../components/articles-grid";
 import CharacterCard from "../components/cards/character-card";
+import ArticleCard from "../components/cards/article-card";
 
 function General() {
   const [characters, setCharacters] = useState(
@@ -49,31 +50,37 @@ function General() {
         title: 'Великий Турнир героев объявлен!',
         body: 'Сразись с лучшими, завоюй славу и получи эпические награды!',
         backgroundSource: '/src/assets/general/article-card-bg-1.jpg',
+        path: '',
       },
       {
         title: 'Великий Турнир героев объявлен!',
         body: 'Сразись с лучшими, завоюй славу и получи эпические награды!',
         backgroundSource: '/src/assets/general/article-card-bg-2.jpg',
+        path: '',
       },
       {
         title: 'Великий Турнир героев объявлен!',
         body: 'Сразись с лучшими, завоюй славу и получи эпические награды!',
         backgroundSource: '/src/assets/general/article-card-bg-2.jpg',
+        path: '',
       },
       {
         title: 'Великий Турнир героев объявлен!',
         body: 'Сразись с лучшими, завоюй славу и получи эпические награды!',
         backgroundSource: '/src/assets/general/article-card-bg-2.jpg',
+        path: '',
       },
       {
         title: 'Великий Турнир героев объявлен!',
         body: 'Сразись с лучшими, завоюй славу и получи эпические награды!',
         backgroundSource: '/src/assets/general/article-card-bg-2.jpg',
+        path: '',
       },
       {
         title: 'Великий Турнир героев объявлен!',
         body: 'Сразись с лучшими, завоюй славу и получи эпические награды!',
         backgroundSource: '/src/assets/general/article-card-bg-2.jpg',
+        path: '',
       },
     ]
   );
@@ -153,8 +160,6 @@ function General() {
       </section>
 
       <section className="general-news">
-        <div className="overlay"></div>
-
         <div className="general-news__content">
           <SectionDivivsor className="general-news__divisor">Новости</SectionDivivsor>
 
@@ -163,6 +168,25 @@ function General() {
           <Button className='general-news__button'>Узнать больше</Button>
         </div>
       </section>
+
+      <div className="general__updates-forum-wrapper">
+        <section className="general-updates">
+          <div className="general-updates__content">
+            <SectionDivivsor className="general-updates__divisor">Обновления</SectionDivivsor>
+
+            <ArticleCard
+              path=""
+              title="Обновление 1.1."
+              className="general-updates__link"
+              src="src/assets/general/update-bg.jpg"
+              body="Описание последнего обновления и основных преимуществ.">
+            </ArticleCard>
+
+            <Button className="general-updates__button">Предыдущие обновления</Button>
+          </div>
+        </section>
+        <section className="general-forum"></section>
+      </div>
     </main>
   );
 }

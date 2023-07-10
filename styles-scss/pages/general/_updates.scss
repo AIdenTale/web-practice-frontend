@@ -1,0 +1,25 @@
+@use '../../base/mixin';
+@use '../../base/typography';
+
+.general-updates {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    @include mixin.content-container;
+    padding: 40px 0 120px 0;
+  }
+
+  &__divisor {
+    margin-bottom: 75px;
+  }
+
+  &__link {
+    height: 375px;
+    margin-bottom: 30px;
+  }
+
+  &__button {
+    align-self: center;
+    @include typography.button($font-weight: 200);
+  }
+}

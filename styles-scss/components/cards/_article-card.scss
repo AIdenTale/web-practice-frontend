@@ -5,8 +5,9 @@
   background: none center/cover no-repeat;
   border-radius: 5px;
   overflow: hidden;
+  cursor: pointer;
   height: 250px;
-  
+
   &__overlay {
     display: flex;
     flex-direction: column;

@@ -5,9 +5,12 @@ function ArticlesGrid({ cardsData, className }) {
     <div className={"articles-grid " + className}>
       {cardsData.map((data, index) => {
         return (
-          <ArticleCard title={data.title}
+          <ArticleCard 
+            className="articles-grid__card"
             src={data.backgroundSource}
+            title={data.title}
             body={data.body}
+            path={data.path}
             key={index} />
         );
       })}
