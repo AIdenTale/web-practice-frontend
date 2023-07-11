@@ -1,0 +1,31 @@
+@use '../../base/mixin';
+@use '../../base/typography';
+
+.general-forum {
+  &__content {
+    @include mixin.content-container;
+  }
+
+  &__divisor {
+    margin-bottom: 60px;
+  }
+
+  &__title {
+    @include typography.title($font-size: 70px);
+    margin-bottom: 12px;
+  }
+  
+  &__body {
+    @include typography.body($font-size: 16px);
+    margin-bottom: 24px;
+  }
+
+  &__button {
+    @include typography.button($font-weight: 200);
+    margin-bottom: 80px;
+  }
+
+  &__hero {
+    @include mixin.center-elements(540px);
+  }
+}

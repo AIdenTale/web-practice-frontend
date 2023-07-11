@@ -185,7 +185,22 @@ function General() {
             <Button className="general-updates__button">Предыдущие обновления</Button>
           </div>
         </section>
-        <section className="general-forum"></section>
+        
+        <section className="general-forum">
+          <div className="general-forum__content">
+
+            <SectionDivivsor className="general-forum__divisor">Форум</SectionDivivsor>
+
+            <div className="general-forum__hero">
+              <div className="general-forum__title">Есть что обсудить?</div>
+
+              <p className="general-forum__body">Присоединяйся к комьюнити наших игроков и разработчиков!
+                Задавай вопросы, делись опытом и нововведениями, которые по твоему мнению необходимы.</p>
+
+              <Button className="general-forum__button">Перейти в Форум</Button>
+            </div>
+          </div>
+        </section>
       </div>
     </main>
   );

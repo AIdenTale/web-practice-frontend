@@ -75,12 +75,12 @@ hr {
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 .navbar__content {
-  max-width: 1160px;
-  margin: 0 auto;
-  height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  max-width: 1160px;
+  margin: 0 auto;
+  height: 100%;
   flex-grow: 1;
 }
 .navbar__link {
@@ -309,6 +309,9 @@ button:hover {
   max-width: 760px;
   margin: 0 auto;
 }
+.general-characters__call > * {
+  max-width: 100%;
+}
 .general-characters__body {
   font-family: "Stem", sans-serif;
   line-height: normal;
@@ -359,6 +362,51 @@ button:hover {
   font-size: 16px;
   line-height: normal;
   font-style: normal;
+}
+
+.general-forum__content {
+  max-width: 1160px;
+  margin: 0 auto;
+  height: 100%;
+}
+.general-forum__divisor {
+  margin-bottom: 60px;
+}
+.general-forum__title {
+  font-family: "Cormorant", sans-serif;
+  line-height: normal;
+  font-weight: 700;
+  font-size: 70px;
+  font-style: normal;
+  color: #FFF;
+  margin-bottom: 12px;
+}
+.general-forum__body {
+  font-family: "Stem", sans-serif;
+  line-height: normal;
+  font-weight: 200;
+  font-size: 16px;
+  font-style: normal;
+  color: #FFF;
+  margin-bottom: 24px;
+}
+.general-forum__button {
+  font-family: "Stem", sans-serif;
+  font-weight: 200;
+  letter-spacing: 0.25px;
+  font-size: 16px;
+  line-height: normal;
+  font-style: normal;
+  margin-bottom: 80px;
+}
+.general-forum__hero {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+}
+.general-forum__hero > * {
+  max-width: 540px;
 }
 
 .general-hero {
@@ -414,7 +462,7 @@ button:hover {
 }
 
 .general-news {
-  background: linear-gradient(180deg, #030201 0%, #1E303A 100%);
+  background: linear-gradient(180deg, #030201 0%, #1F303A 100%);
 }
 .general-news__content {
   display: flex;
