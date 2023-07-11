@@ -9,10 +9,11 @@ body {
 
 a {
   text-decoration: none;
-  color: black;
+  color: #FFF;
 }
 
 ul {
+  list-style-type: none;
   padding: 0;
   margin: 0;
 }
@@ -101,6 +102,70 @@ hr {
   font-style: normal;
   margin-left: 24px;
   width: 90px;
+}
+
+.footer {
+  background: #000;
+}
+.footer__content {
+  max-width: 1160px;
+  margin: 0 auto;
+  height: 100%;
+  padding: 90px 0 24px 0;
+}
+.footer__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 20px;
+  row-gap: 0;
+  margin-bottom: 90px;
+}
+.footer__mark {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
+}
+.footer__mark > * {
+  max-width: 100%;
+}
+.footer__logo {
+  margin-bottom: 25px;
+}
+.footer__links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 20px;
+  row-gap: 0;
+}
+.footer__list {
+  display: flex;
+  flex-direction: column;
+}
+.footer__list-item {
+  margin-bottom: 15px;
+}
+.footer__list-title {
+  font-family: "Stem", sans-serif;
+  line-height: normal;
+  font-weight: 500px;
+  font-size: 24px;
+  font-style: normal;
+  color: #FFF;
+}
+.footer__body {
+  font-family: "Stem", sans-serif;
+  line-height: normal;
+  font-weight: 200;
+  font-size: 16px;
+  font-style: normal;
+  color: #FFF;
+}
+.footer__author {
+  display: flex;
+  justify-content: space-between;
 }
 
 button {
@@ -305,6 +370,7 @@ button:hover {
   display: flex;
   text-align: center;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   max-width: 760px;
   margin: 0 auto;
@@ -368,6 +434,7 @@ button:hover {
   max-width: 1160px;
   margin: 0 auto;
   height: 100%;
+  padding: 0 0 80px 0;
 }
 .general-forum__divisor {
   margin-bottom: 60px;
@@ -403,6 +470,7 @@ button:hover {
   display: flex;
   text-align: center;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 .general-forum__hero > * {

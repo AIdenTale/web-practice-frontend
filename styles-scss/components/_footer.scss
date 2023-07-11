@@ -1,0 +1,51 @@
+@use '../base/mixin';
+@use '../base/typography';
+
+.footer {
+  background: #000;
+
+  &__content {
+    @include mixin.content-container;
+    padding: 90px 0 24px 0;
+  }
+
+  &__grid {
+    @include mixin.make-union-grid($cols: 2, $column-gap: 20px);
+    margin-bottom: 90px;
+  }
+
+  &__mark {
+    @include mixin.center-elements;
+    justify-content: flex-start;
+  }
+
+  &__logo {
+    margin-bottom: 25px;
+  }
+
+  &__links {
+    @include mixin.make-union-grid($cols: 3, $column-gap: 20px);
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__list-item {
+    margin-bottom: 15px;
+  }
+
+  &__list-title {
+    @include typography.body($font-weight: 500px);
+  }
+
+  &__body {
+    @include typography.body($font-size: 16px);
+  }
+
+  &__author {
+    display: flex;
+    justify-content: space-between;
+  }
+}

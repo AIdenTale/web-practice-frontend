@@ -4,6 +4,7 @@
 .general-forum {
   &__content {
     @include mixin.content-container;
+    padding: 0 0 80px 0;
   }
 
   &__divisor {
